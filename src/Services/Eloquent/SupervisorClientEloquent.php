@@ -8,12 +8,12 @@
 
 namespace Polaris\XmlRpc\Eloquent;
 
-use Polaris\XmlRpc\ClientInterface;
+use Polaris\XmlRpc\SupervisorClientInterface;
 use Zend\XmlRpc\Client;
 use Zend\Http\Client as HttpClient;
 use Illuminate\Contracts\Foundation\Application;
 
-class SupervisorClientEloquent implements ClientInterface
+class SupervisorClientEloquent implements SupervisorClientInterface
 {
     /**
      * @var Client $client

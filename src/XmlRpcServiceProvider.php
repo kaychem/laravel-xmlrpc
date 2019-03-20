@@ -9,7 +9,10 @@ namespace Polaris\XmlRpc;
 
 use Illuminate\Support\ServiceProvider;
 use Polaris\XmlRpc\Eloquent\SupervisorClientEloquent;
-
+/**
+ * Class XmlRpcServiceProvider
+ * @package Polaris\XmlRpc
+ */
 class XmlRpcServiceProvider extends ServiceProvider
 {
     /**
