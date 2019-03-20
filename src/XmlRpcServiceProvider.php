@@ -10,7 +10,7 @@ namespace Polaris\XmlRpc;
 use Illuminate\Support\ServiceProvider;
 use Polaris\XmlRpc\Eloquent\SupervisorClientEloquent;
 
-class PassportServiceProvider extends ServiceProvider
+class XmlRpcServiceProvider extends ServiceProvider
 {
     /**
      * Indicates if loading of the provider is deferred.
