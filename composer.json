@@ -1,0 +1,28 @@
+{
+    "name": "polaris/laravel-xmlrpc",
+    "description": "XML-RPC server and client implementations",
+    "authors": [
+        {
+            "name": "Kay",
+            "email": "kjnnyz@163.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.1",
+        "illuminate/console": "~5.6.0|~5.7.0|~5.8.0|~5.9.0",
+        "illuminate/container": "~5.6.0|~5.7.0|~5.8.0|~5.9.0",
+        "illuminate/support": "~5.6.0|~5.7.0|~5.8.0|~5.9.0",
+        "zendframework/zend-xmlrpc": "^2.7"
+    },
+    "autoload": {
+        "psr-4": {
+            "Polaris\\XmlRpc\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Polaris\\XmlRpc\\Tests\\": "tests/",
+            "Polaris\\XmlRpc\\Demo\\": "demo/"
+        }
+    }
+}
