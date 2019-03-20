@@ -23,7 +23,9 @@ class SupervisorClientEloquent implements SupervisorClientInterface
      * @var string
      */
     protected $server;
-
+    /**
+     * @var string
+     */
     protected $port;
     /**
      * @var string
@@ -49,7 +51,8 @@ class SupervisorClientEloquent implements SupervisorClientInterface
         $this->client = $application->make(
             Client::class,
             [
-                $this->server . ":" . $this->port, $httpClient
+                'server'=> $this->server . ":" . $this->port,
+                'client' => $httpClient
             ]
         );
     }
