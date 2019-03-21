@@ -62,6 +62,8 @@ class SupervisorClientCommand extends Command
         $this->options = $this->option('options');
 
         $this->method = $this->method ?: $this->defaultMethod;
+
+        $this->exec();
     }
 
     /**
@@ -69,9 +71,9 @@ class SupervisorClientCommand extends Command
      */
     protected function exec()
     {
-        $options = join(",", $this->options)?:[];
+        $options = explode(",", $this->options)?:[];
 
-        $this->client->exec($this->method, $options);
+        $result = $this->client->exec($this->method, $options);
 
         $this->info('Success');
     }

@@ -12,6 +12,7 @@ use Polaris\XmlRpc\SupervisorClientInterface;
 use Zend\XmlRpc\Client;
 use Zend\Http\Client as HttpClient;
 use Illuminate\Contracts\Foundation\Application;
+use Zend\Http\Client\Adapter\Exception\RuntimeException;
 
 class SupervisorClientEloquent implements SupervisorClientInterface
 {
@@ -66,7 +67,11 @@ class SupervisorClientEloquent implements SupervisorClientInterface
      */
     public function exec($method, $params = [])
     {
-        return $this->client->call(func_num_args());
+        try {
+            return $this->client->call($method, $params = []);
+        } catch (RuntimeException $exception) {
+            throw $exception;
+        }
     }
 
     /**

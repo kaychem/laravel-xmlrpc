@@ -49,6 +49,10 @@ class XmlRpcServiceProvider extends ServiceProvider
             SupervisorClientInterface::class,
             SupervisorClientEloquent::class
         );
+        $this->mergeConfigFrom(
+            __DIR__.'/config/supervisor.php',
+            'supervisor'
+        );
     }
 
     /**
